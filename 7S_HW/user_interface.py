@@ -41,13 +41,16 @@ def Menu():
 
         if command == 3:
             lg.Log('User has selected command 3')
-            Import()
+            print('Введите расширение импортируемого файла: ')
+            subcommand = int(input('1 - .txt;\n'
+                                    '2 - .csv'))
+            op.Import(subcommand)
 
         if command == 4:
             lg.Log('User has selected command 4')
             print('Введите желаемый формат экспорта: ')
-            subcommand = int(input('1 - Разделитель пустая строка;\n'
-                                    '2 - Разделитель точка с запятой(;)'))
+            subcommand = int(input('1 - .txt;\n'
+                                    '2 - .csv'))
             lg.Log(f'User has selected {subcommand}')
             name_phonebook = str(input('Введите желаемое название файла: '))
             lg.Log(f'User has entered {name_phonebook}')
