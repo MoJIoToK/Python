@@ -27,6 +27,18 @@ def students(password):
                 a = False
     return a
 
+def admin(password):
+    # a = False
+    with open('8S_HW\_Admin.csv', 'r', encoding='utf-8') as file:
+        reader_admin = csv.reader(file, delimiter=';')
+        for row in reader_admin:
+            if password in row[3]:
+                a = True
+                break
+            else:
+                a = False
+    return a
+
 # print(Teacher('Petrova'))
 # print(Students('Belova'))
 
