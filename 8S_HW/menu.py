@@ -2,11 +2,11 @@ import entry
 # import read
 # import control
 import logger as lg
-
+# import autorization as au
 print('Добро пожаловать! Вас приветствует информационная система "Школик"')
 
 
-def Menu():
+def menu():
 
     flag = True
 
